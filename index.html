@@ -18,7 +18,7 @@
 </head>
 <body>
 <h1>Privacy Policy — Kaomi: Nihongo Quest</h1>
-<p class="meta">Effective date: 2026-08-28 · App: Kaomi: Nihongo Quest (<code>com.kaomidevstudio.nihongoquest</code>) · Developer: Kaomi Dev Studio · Contact: <a href="mailto:kaomiwings@gmail.com">kaomiwings@gmail.com</a></p>
+<p class="meta">Effective date: 2026-10-21 · App: Kaomi: Nihongo Quest (<code>com.kaomidevstudio.nihongoquest</code>) · Developer: Kaomi Dev Studio · Contact: <a href="mailto:kaomiwings@gmail.com">kaomiwings@gmail.com</a></p>
 
 <h2>Who this app is for</h2>
 <p>Kaomi: Nihongo Quest is an educational game that teaches Japanese through a scene-based RPG adventure. It is designed for a <strong>general audience</strong> of Japanese learners — teens and adults — not specifically for children, and it is not directed at children under 13.</p>
@@ -37,38 +37,40 @@
 <p>During onboarding you may type a display name so Kaomi (your in-app cat companion) can address you by it. This name is stored <strong>only in local storage on your device</strong> (an offline Hive database) and is never transmitted anywhere. If you skip it, the app still works normally.</p>
 
 <h2>Microphone and speech recognition</h2>
-<p>The app requests microphone permission (<code>RECORD_AUDIO</code>) so you can practice speaking Japanese out loud and receive a pronunciation score. Here is exactly how that works:</p>
+<p>The app requests microphone permission (on Android, <code>RECORD_AUDIO</code>; on iOS, Microphone and Speech Recognition permissions) so you can practice speaking Japanese out loud and receive a pronunciation score. Here is exactly how that works:</p>
 <ul>
   <li>The app itself does <strong>not</strong> record, save, or upload your voice.</li>
-  <li>When you tap the microphone, audio is passed directly to <strong>your device's built-in Android speech-recognition service</strong> (the system <code>SpeechRecognizer</code>) to convert your speech into text so the app can score it. The app never receives, stores, or has access to the raw recording — only the recognized text.</li>
-  <li>On most Android devices, that built-in speech-recognition service is provided by Google and may process the audio on Google's own servers, governed by Google's own privacy policy. This happens at the operating-system level, the same way it does for any app that uses Android's standard voice-input APIs (including the keyboard's microphone button) — it is not something this app controls or can bypass.</li>
-  <li>If you decline microphone permission, you can still play; only the speaking-practice and pronunciation-scoring features are unavailable.</li>
+  <li><strong>On Android:</strong> when you tap the microphone, audio is passed directly to <strong>your device's built-in Android speech-recognition service</strong> (the system <code>SpeechRecognizer</code>) to convert your speech into text so the app can score it. The app never receives, stores, or has access to the raw recording — only the recognized text.</li>
+  <li><strong>On Android</strong>, on most devices, that built-in speech-recognition service is provided by Google and may process the audio on Google's own servers, governed by Google's own privacy policy. This happens at the operating-system level, the same way it does for any app that uses Android's standard voice-input APIs (including the keyboard's microphone button) — it is not something this app controls or can bypass.</li>
+  <li><strong>On iOS (iPhone):</strong> when you tap the microphone, audio is passed to <strong>Apple's iOS speech recognition</strong> (<code>SFSpeechRecognizer</code>) to convert your speech into text so the app can score it. The app never receives, stores, or has access to the raw recording — only the recognized text. Audio may be sent to Apple's servers to be processed, governed by Apple's own privacy policy. This happens at the operating-system level and is not something this app controls.</li>
+  <li>Spoken audio played back by the app (text-to-speech) is generated on your device.</li>
+  <li>If you decline microphone or speech-recognition permission, you can still play; only the speaking-practice and pronunciation-scoring features are unavailable.</li>
 </ul>
 
 <h2>Bluetooth</h2>
-<p>The app requests <code>BLUETOOTH</code> / <code>BLUETOOTH_CONNECT</code> permission solely so that a paired Bluetooth headset's microphone can be used for pronunciation practice, the same way it would for any voice app. We do not use Bluetooth for tracking, advertising identifiers, or any other purpose.</p>
+<p>On Android, the app requests <code>BLUETOOTH</code> / <code>BLUETOOTH_CONNECT</code> permission solely so that a paired Bluetooth headset's microphone can be used for pronunciation practice, the same way it would for any voice app. We do not use Bluetooth for tracking, advertising identifiers, or any other purpose.</p>
 
 <h2>Internet access</h2>
-<p>The app requests the <code>INTERNET</code> permission but, in this version, makes <strong>no network requests to any backend service of ours</strong> — there is no cloud sync, no server-side leaderboard, and no remote content download. All lesson content, vocabulary, and progress ship with the app or live only in local storage. (Android's speech-recognition service, described above, may itself use the network on the operating system's behalf.)</p>
+<p>On Android, the app requests the <code>INTERNET</code> permission; on both Android and iOS, in this version, the app makes <strong>no network requests to any backend service of ours</strong> — there is no cloud sync, no server-side leaderboard, and no remote content download. All lesson content, vocabulary, and progress ship with the app or live only in local storage. (The Android and iOS speech-recognition services, described above, may themselves use the network on the operating system's behalf.)</p>
 
 <h2>In-app purchases</h2>
-<p>The app's code includes a catalog of planned one-time unlock purchases, but <strong>in-app purchasing is not active in this release</strong> — no purchase flow is reachable from the app's menus, and no payment can be made. If and when purchases are enabled in a future update, this policy will be updated first, purchases will be processed entirely by <strong>Google Play Billing</strong> (we would never see or store your payment details), and the update will be described in the app's release notes.</p>
+<p>The app's code includes a catalog of planned one-time unlock purchases, but <strong>in-app purchasing is not active in this release</strong> — no purchase flow is reachable from the app's menus, and no payment can be made. If and when purchases are enabled in a future update, this policy will be updated first, purchases will be processed entirely by the app store you installed from — <strong>Google Play Billing</strong> on Android, or <strong>Apple's App Store</strong> on iPhone (we would never see or store your payment details), and the update will be described in the app's release notes.</p>
 
 <h2>Notifications</h2>
-<p>With your permission, the app may send local reminders to continue practicing. These are scheduled and generated entirely on your device using Android's local notification system. We do not send remote/push notifications and do not collect any data to target notifications.</p>
+<p>With your permission, the app may send local reminders to continue practicing. These are scheduled and generated entirely on your device using Android's local notification system (on Android) or iOS local notifications (on iPhone). We do not send remote/push notifications and do not collect any data to target notifications.</p>
 
 <h2 id="data-deletion">Data retention and deletion</h2>
 <p>Because <strong>Kaomi: Nihongo Quest</strong> (developer: Kaomi Dev Studio) collects no personal information and has no backend, there is no server-side account or record to delete. Everything the app knows about your progress — your display name, vocabulary learned, streaks, and settings — lives only in local storage on your device.</p>
 <p><strong>To request deletion of your data:</strong></p>
 <ol>
-  <li><strong>Uninstall the app.</strong> Because nothing is stored off your device, uninstalling permanently and completely removes all app data — this is the fastest and most complete deletion method.</li>
+  <li><strong>Uninstall the app</strong> (on iPhone, delete the app). Because nothing is stored off your device, uninstalling permanently and completely removes all app data — this is the fastest and most complete deletion method.</li>
   <li>Alternatively, use <strong>Settings → Reset Progress</strong> inside the app to clear all saved data while keeping the app installed.</li>
   <li>If you have questions about what data the app holds, email <a href="mailto:kaomiwings@gmail.com">kaomiwings@gmail.com</a> and we will respond within 30 days.</li>
 </ol>
 <p><strong>What is deleted:</strong> everything — there is nothing stored anywhere except on your own device. <strong>What we retain on our servers:</strong> nothing; we have no servers that store user data.</p>
 
 <h2>Children's privacy</h2>
-<p>This app is not directed at children and is not part of Google Play's Designed for Families program. We do not knowingly collect personal information from anyone, including children, because the app collects no personal information from any user.</p>
+<p>This app is not directed at children and, on Android, is not part of Google Play's Designed for Families program. We do not knowingly collect personal information from anyone, including children, because the app collects no personal information from any user.</p>
 
 <h2>Changes to this policy</h2>
 <p>If we change our data practices — for example, when in-app purchases or any online feature is introduced — we will update this page and the effective date above before that change ships.</p>
